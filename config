@@ -1,8 +1,9 @@
 IMG_NAME='wlanpi'
+USE_QCOW2='0'
 RELEASE='buster'
 DEPLOY_ZIP='1'
 LOCALE_DEFAULT='en_US.UTF-8'
-TARGET_HOSTNAME='wlanpi-arm64'
+TARGET_HOSTNAME='wlanpi-rpi'
 KEYBOARD_KEYMAP='us'
 KEYBOARD_LAYOUT='English (US)'
 TIMEZONE_DEFAULT='America/Chicago'
@@ -13,3 +14,4 @@ WPA_COUNTRY='US'
 #WPA_PASSWORD=''
 ENABLE_SSH='1'
 STAGE_LIST="stage0 stage1 stage2 wlanpi"
+
