@@ -1,5 +1,4 @@
-
-name: Build Debian Packages
+name: Build WLAN Pi image
 
 on:
   # Allow manual runs of workflow from Actions tab
@@ -33,7 +32,7 @@ jobs:
 
           sudo ./build-docker.sh
 
-      - name: Upload image
+      - name: Archive image and upload to GitHub
         uses: actions/upload-artifact@v2
         with:
           name: wlanpi-image
@@ -43,7 +42,7 @@ jobs:
     if: always()
     name: Post Workflow Status to Slack
     needs:
-      - build
+      - sbuild
     runs-on: 'ubuntu-20.04'
     steps:
       - name: Slack Workflow Notification
@@ -51,5 +50,3 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           slack_webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
-          channel: '#pi-gen'
-          name: 'WLAN Pi CI Bot'
