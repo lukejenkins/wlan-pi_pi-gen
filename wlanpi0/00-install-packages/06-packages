@@ -7,8 +7,8 @@ wlanpi-chat-bot
 wlanpi-bluetooth
 wlanpi-core
 wlanpi-hwcheck
+wlanpi-wconsole
 #wlanpihotspot
-#wconsole
 #wiperf
 #wlanpiserver
 libpcap0.8/bullseye-backports
