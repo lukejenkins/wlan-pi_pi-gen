@@ -42,6 +42,12 @@ dtoverlay=disable-bt
 dtoverlay=vc4-fkms-v3d
 max_framebuffers=2
 
+# Switch to kernel 64 bits
+arm_64bit=1
+
+# Use wlanpi-kernel
+kernel=kernel8-wp.img
+
 
 [all]
 # Enable i2c
@@ -55,6 +61,3 @@ arm_boost=1
 
 # heartbeat LED
 dtparam=act_led_trigger=heartbeat
-
-# Switch to kernel 64 bits
-arm_64bit=1
