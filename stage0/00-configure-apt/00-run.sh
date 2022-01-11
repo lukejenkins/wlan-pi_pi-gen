@@ -12,6 +12,14 @@ else
 	rm -f "${ROOTFS_DIR}/etc/apt/apt.conf.d/51cache"
 fi
 
+on_chroot << EOF
+# Add packagecloud wlanpi/main repository
+curl -s https://packagecloud.io/install/repositories/wlanpi/main/script.deb.sh | sudo bash
+
+# Add packagecloud wlanpi/dev repository
+curl -s https://packagecloud.io/install/repositories/wlanpi/dev/script.deb.sh | sudo bash
+EOF
+
 on_chroot apt-key add - < files/raspberrypi.gpg.key
 on_chroot << EOF
 apt-get update
