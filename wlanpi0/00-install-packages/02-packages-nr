@@ -9,3 +9,4 @@ apt-transport-https
 tftpd-hpa 
 tftp
 chrony
+gpsd
